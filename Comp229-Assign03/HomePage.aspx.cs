@@ -44,7 +44,7 @@ namespace comp
 
             comm.Parameters.Add("@enrolldate", System.Data.SqlDbType.Date);
             comm.Parameters["@enrolldate"].Value = txtEnrollmentDate.Text;
-            
+            //Label1.Text = "values are inserted";
             // Enclose database code in Try-Catch-Finally
             try
             {

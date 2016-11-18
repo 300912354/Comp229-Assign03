@@ -13,11 +13,11 @@
                background-color:gainsboro;
            }
     </style>
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Page</h2>
+    <h2 style="text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Page</h2>
     <p>&nbsp;</p>
 
 
-    <div><asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="False"  OnSelectedIndexChanged="StudentGridView_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" Height="16px" Width="441px">
+    <div style="text-align: center"><asp:GridView ID="StudentGridView" runat="server" AutoGenerateColumns="False"  OnSelectedIndexChanged="StudentGridView_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" Height="16px" Width="441px" HorizontalAlign="Center">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="StudentID" HeaderText="Student Number" />
@@ -40,7 +40,6 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
          </asp:GridView> 
         <br />
-    </div>  
     <asp:DetailsView ID="studentDetails" runat="server" Height="16px" Width="281px" AutoGenerateRows="False"  CellPadding="4" ForeColor="#333333" GridLines="None" OnModeChanging="studentDetails_ModeChanging" style="margin-top: 0px">
            
              <AlternatingRowStyle BackColor="White" />
@@ -64,6 +63,13 @@
              <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
              <RowStyle BackColor="#E3EAEB" />
            </asp:DetailsView> 
+            
+    </div>  
+
+
+    <div style="text-align: center"> 
+        <br />
+    </div>  
             
            <%--<PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
            <RowStyle BackColor="#E3EAEB" />

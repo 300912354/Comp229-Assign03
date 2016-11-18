@@ -16,7 +16,7 @@
     </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
  <div>    <h2 style="height: 0px" id="Menu1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HOME PAGE</h2>
-   </div> <p>&nbsp;</p>
+   </div> <p>&nbsp&nbsp;</p>
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="383px">
         <AlternatingRowStyle BackColor="White" />
@@ -26,7 +26,10 @@
             
             <asp:HyperLinkField />
                 
-       <asp:CommandField ShowInsertButton="True" />
+       
+            <asp:BoundField DataField="StudentID" HeaderText="StudentID" ReadOnly="True" SortExpression="StudentID" />
+                
+       
         </Columns>
         
         <EditRowStyle BackColor="#7C6F57" />
@@ -45,7 +48,7 @@
         <br />
         <br />
         </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Comp229Assign03ConnectionString %>" SelectCommand="SELECT [FirstMidName], [LastName] FROM [Students]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Comp229Assign03ConnectionString %>" SelectCommand="SELECT [FirstMidName], [LastName], [StudentID], [EnrollmentDate] FROM [Students]"></asp:SqlDataSource>
     FirstMidName<asp:TextBox ID="txtFirstMidName" runat="server"></asp:TextBox>
     <br />
     LastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
@@ -57,6 +60,7 @@
      <br />
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="ADD" Width="174px" />
+    <asp:Label ID="Label1" runat="server" BorderColor="Red" Text="Label"></asp:Label>
     <br />
 </asp:Content>
 
