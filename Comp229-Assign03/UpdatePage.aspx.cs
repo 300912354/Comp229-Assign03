@@ -14,7 +14,7 @@ namespace comp
         private const string connectionPath = "Server=localhost\\SqlExpress;Database=Comp229Assign03;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //BindList();
+            BindList();
         }
         protected void StudentsList_ItemCommand(object source, DataListCommandEventArgs e)
         {

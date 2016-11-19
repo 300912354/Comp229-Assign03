@@ -24,6 +24,7 @@
             <asp:BoundField DataField="CourseID" HeaderText="CourseID" SortExpression="CourseID" />
             <asp:BoundField DataField="StudentID" HeaderText="StudentID" SortExpression="StudentID" />
             <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+               <asp:CommandField ShowDeleteButton="true"  />
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -38,5 +39,15 @@
 </asp:GridView>
 
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Comp229Assign03ConnectionString %>" SelectCommand="SELECT * FROM [Enrollments]"></asp:SqlDataSource>
-
+     
+  <%--  <div style="text-align: center">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Comp229Assign03ConnectionString %>" SelectCommand="SELECT * FROM [Courses]" 
+                 DeleteCommand="Delete from [Courses] where [CourseID]=@CourseID">
+           
+            <DeleteParameters>
+                <asp:Parameter Name="CourseID" Type="Int32" />
+            </DeleteParameters>
+        </asp:SqlDataSource>
+        <br />
+        </div>--%>
 </asp:Content>

@@ -3,7 +3,7 @@
 
     <style>
         .jumbotron {
-            background-image: url('.Images/school.jpg');
+           
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -60,7 +60,7 @@
      <br />
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="ADD" Width="174px" />
-    <asp:Label ID="Label1" runat="server" BorderColor="Red" Text="Label"></asp:Label>
+ 
     <br />
 </asp:Content>
 
